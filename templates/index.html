@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Web Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 AI Web Scraper</h1>
+        
+        <!-- Scraping Form -->
+        <form method="post">
+            <input type="text" name="url" placeholder="Enter Website URL" required>
+            <button type="submit" name="scrape">Scrape Website</button>
+        </form>
+
+        {% if dom_content %}
+        <div class="scraped-content">
+            <h2>Scraped Content:</h2>
+            <textarea readonly>{{ dom_content }}</textarea>
+        </div>
+        {% endif %}
+
+        {% if session['dom_content'] %}
+        <!-- Parsing Form -->
+        <form method="post">
+            <textarea name="parse_description" placeholder="Describe what you want to parse" required></textarea>
+            <button type="submit" name="parse">Parse Content</button>
+        </form>
+        {% endif %}
+
+        {% if parsed_result %}
+        <div class="parsed-result">
+            <h2>Parsed Result:</h2>
+            <p>{{ parsed_result }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* Cool and Attractive Styling for Flask Web Scraper */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling for Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Scrape & Parse Buttons */
+button {
+    background: #ff4b2b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(255, 75, 43, 0.3);
+}
+
+/* 🚀 Hover Effect: Scale, Glow & Color Change */
+button:hover {
+    background: #ff6f61;
+    transform: scale(1.08);
+    box-shadow: 0 8px 15px rgba(255, 75, 43, 0.4);
+}
+
+/* Click Effect: Slight Shrink */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Scraped Content & Parsed Result Styling */
+.scraped-content, .parsed-result {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+}
